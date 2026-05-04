@@ -45,3 +45,19 @@ The CloudFormation template automatically creates and manages the following AWS 
 [cite_start]To avoid ongoing AWS charges, delete the stack via the CloudFormation console[cite: 95, 96]. 
 [cite_start]*Note: Ensure the S3 bucket is empty before deletion, or the process may fail[cite: 98, 99].*# aws-cloudformation-iaas-lab
 Automated deployment of an AWS Web Stack using CloudFormation. Features EC2, S3, IAM, and Security Group orchestration via Infrastructure as Code (IaC).
+
+---
+## Bonus: Terraform Implementation
+In addition to CloudFormation, this lab was also implemented using **Terraform** to demonstrate multi-tool proficiency in Infrastructure as Code.
+
+### Key Terraform Features Used:
+* **Providers**: Configured the AWS provider to interact with the cloud API.
+* **Resources**: Defined identical infrastructure components (EC2, S3, SG, and IAM) using HCL (HashiCorp Configuration Language).
+* **Variables**: Managed input values for environment customization.
+* **State Management**: Understanding the `terraform.tfstate` file for tracking managed infrastructure.
+
+### Deployment Commands:
+1. `terraform init`: Initialize the working directory and download providers.
+2. `terraform plan`: Preview the changes to be made.
+3. `terraform apply`: Execute the deployment.
+4. `terraform destroy`: Safely remove all provisioned resources.
